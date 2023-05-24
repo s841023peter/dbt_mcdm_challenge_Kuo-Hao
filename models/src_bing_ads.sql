@@ -1,11 +1,13 @@
 {{ config(materialized='view') }}
 SELECT
   __insert_date,
-  ad_id,
-  campaign_id,
+  `campaign_id` as id,
+
+
   channel,
   clicks,
   `date`,
+
   `imps` as impressions,
   spend,
   `conv` as conversions
